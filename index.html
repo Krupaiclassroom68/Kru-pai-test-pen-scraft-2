@@ -265,4 +265,17 @@ function kpBackNumbers(){$('dots').scrollIntoView({behavior:'smooth',block:'star
  sync();
 })();
 </script>
+
+<style id="kpFullPenOverlayFix">
+/* Restore fullscreen writing area: overlay scratch height rule was overriding fullPen. */
+#kpAnswerScratchStage #scratch #paper.fullPen {
+ position:fixed!important;inset:0!important;top:0!important;left:0!important;
+ width:100vw!important;height:100dvh!important;min-height:100dvh!important;
+ z-index:80!important;overflow:hidden!important;touch-action:none!important;
+}
+#kpAnswerScratchStage #scratch #paper.fullPen canvas {
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ touch-action:none!important;pointer-events:auto!important;
+}
+</style>
 </body></html>
